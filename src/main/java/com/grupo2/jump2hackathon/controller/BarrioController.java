@@ -41,6 +41,5 @@ public class BarrioController {
         Optional<Barrio> barrioOptional = barrioService.getBarrioById(id);
         return barrioOptional.map(barrio -> new ResponseEntity<>(barrio, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
-
-
+    
 }
