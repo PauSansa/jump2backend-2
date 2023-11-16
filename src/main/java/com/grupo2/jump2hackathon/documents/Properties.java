@@ -7,5 +7,5 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 public class Properties {
-    private int codi_Barri;
+    private int Codi_Barri;
 }

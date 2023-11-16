@@ -25,4 +25,17 @@ public class BarrioService {
         return barrioRepository.findById(id);
     }
 
+    public List<Barrio> juntarBarrioPoligono(){
+        List<Barrio> barriosVacios = barrioRepository.findAll();
+        List<Barrio> barrios = barriosVacios.stream().map((barrio -> {
+            int codiBarri = Integer.parseInt(barrio.getCodiBarri());
+            Poligono poligonoOptional = poligonoRepository.findByCodiBarri(codiBarri);
+            barrio.setPoligono(poligonoOptional);
+            barrio.setUuid(UUID.randomUUID());
+            return barrio;
+        })).toList();
+
+        return barrios;
+    }
+
 }

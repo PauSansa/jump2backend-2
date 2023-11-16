@@ -33,6 +33,12 @@ public class BarrioController {
         return poligonoService.getAll();
     }
 
+    @GetMapping("/juntar")
+    public List<Barrio> juntarBarrioPoligono(){
+
+        return barrioService.juntarBarrioPoligono();
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<Barrio>> getAllBarriosController(){
 
