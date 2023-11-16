@@ -8,6 +8,7 @@ import jakarta.websocket.server.PathParam;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,14 +21,14 @@ import java.util.UUID;
 @RequestMapping("/barrio")
 @RequiredArgsConstructor
 public class BarrioController {
-    private final BarrioService barrioService;
 
+    @Autowired
+    private final BarrioService barrioService;
 
     @GetMapping("/all")
     @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<List<Barrio>> getAllBarriosController(){
         return new ResponseEntity<>(barrioService.getAllBarrios(), HttpStatus.OK);
     }
-
 
 }

@@ -18,9 +18,4 @@ public class BarrioService {
         return barrioRepository.findAll();
     }
 
-    public Optional<Barrio> getBarrioById(UUID id) {
-
-        return barrioRepository.findById(id);
-    }
-
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.grupo2.jump2hackathon.controller.BarrioControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-16T20:10:57" hostname="LAPTOP-K4F8O8IF" time="4.247">
+  <properties/>
+  <testcase name="getAllBarriosControllerTest()" classname="com.grupo2.jump2hackathon.controller.BarrioControllerTest" time="4.247"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

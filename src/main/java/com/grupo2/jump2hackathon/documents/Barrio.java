@@ -1,16 +1,21 @@
 package com.grupo2.jump2hackathon.documents;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.bson.json.JsonObject;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.UUID;
 
-@Document(collection = "barrio")
+
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "barrio")
 public class Barrio {
     private UUID uuid;
     private String codiBarri;
